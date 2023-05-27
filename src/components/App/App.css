@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+p {
+  font-weight: 300;
+}
+
+.App {
+  background-color: #66c15d;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.app_body {
+  display: flex;
+  width: 99vw;
+  height: 99vh;
+  background-color: #ededed;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.7);
+}

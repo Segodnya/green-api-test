@@ -1,0 +1,46 @@
+.chat_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  border-top: 1px solid lightgray;
+}
+.chat_footer > form {
+  flex: 1;
+  display: flex;
+}
+.chat_footer > form > input {
+  flex: 1;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.chat_footer > form > button {
+  display: none;
+}
+.chat_header_icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 36px;
+  padding: 12px;
+  margin: 12px;
+  background-color: transparent;
+  background-size: 24px;
+  opacity: 0.5;
+  cursor: pointer;
+  transform: scale;
+  transition: scale 3s cubic-bezier(0.1, 0.8, 0.5, 2);
+}
+.chat_header_icon:hover {
+  scale: 1.5;
+}
+.chat_header_icon-face {
+  background-image: url('../../images/face.svg');
+}
+.chat_header_icon-mic {
+  background-image: url('../../images/mic.svg');
+}

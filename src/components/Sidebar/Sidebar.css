@@ -1,0 +1,74 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+}
+.sidebar_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-right: 1px solid lightgray;
+}
+
+.sidebar_headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 7vw;
+}
+
+.sidebar_chat {
+  height: 100vh;
+  background: white;
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.sidebar_header_icon {
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 36px;
+  padding: 12px;
+  margin: 12px;
+  background-color: transparent;
+  background-size: 24px;
+  opacity: 0.5;
+  cursor: pointer;
+  transform: scale;
+  transition: scale 3s cubic-bezier(0.1, 0.8, 0.5, 2);
+}
+
+.sidebar_header_icon:hover {
+  scale: 1.5;
+}
+.sidebar_header_icon-status {
+  background-image: url('../../images/status.svg');
+}
+.sidebar_header_icon-dots {
+  background-image: url('../../images/dots.svg');
+}
+.sidebar_header_icon-edit {
+  background-image: url('../../images/edit.svg');
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
