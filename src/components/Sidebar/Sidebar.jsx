@@ -2,8 +2,8 @@ import './Sidebar.css';
 import '../Chat/ChatHeader/ChatHeader.css';
 import React from 'react';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import SidebarChat from '../SidebarChat/SidebarChat';
-import SidebarSearch from '../SidebarSearch/SidebarSearch';
+import SidebarChat from './SidebarChat/SidebarChat';
+import SidebarSearch from './SidebarSearch/SidebarSearch';
 
 const Sidebar = ({ usersList, onChoice }) => {
   const { avatar: currentUserAvatar } = React.useContext(CurrentUserContext);

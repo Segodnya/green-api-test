@@ -1,6 +1,6 @@
 import './SidebarSearch.css';
 import React from 'react';
-import useForm from '../../hooks/useForm';
+import useForm from '../../../hooks/useForm';
 
 const SidebarSearch = ({ usersList, onUserSelect }) => {
   const { values, handleChange } = useForm();
