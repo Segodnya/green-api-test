@@ -1,4 +1,5 @@
 import React from 'react';
+import './ChatMessage.css';
 
 function ChatMessage({ message, currentUser }) {
   const isSender = !!message.senderName;
@@ -12,7 +13,7 @@ function ChatMessage({ message, currentUser }) {
   };
 
   return (
-    <p key={message.idMessage} className={`chat_message ${isSender ? '' : 'chat_reciever'}`}>
+    <p className={`chat_message ${isSender ? '' : 'chat_reciever'}`}>
       <span className="chat_name">{isSender ? message.senderName : currentUser?.name}</span>
       {getTextMessage()}
       <span className="chat_timestamp">{new Date(message.timestamp).toLocaleTimeString()}</span>

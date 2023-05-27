@@ -19,7 +19,6 @@ function Login({ onLogin }) {
         </div>
         <div className="login__form-container">
           <form className="login-form" onSubmit={handleSubmit}>
-            <label htmlFor="IdInstance">IdInstance:</label>
             <input
               id="IdInstance"
               className="login-form__input"
@@ -32,7 +31,6 @@ function Login({ onLogin }) {
               maxLength="12"
               required
             />
-            <label htmlFor="ApiTokenInstance">ApiTokenInstance:</label>
             <input
               id="ApiTokenInstance"
               className="login-form__input"

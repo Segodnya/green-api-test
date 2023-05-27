@@ -1,4 +1,5 @@
 import React from 'react';
+import './ChatHeader.css';
 
 function ChatHeader({ roomName }) {
   return (

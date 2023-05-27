@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 65px;
   border-top: 1px solid lightgray;
 }
 .chat_footer > form {
@@ -39,8 +39,8 @@
   scale: 1.5;
 }
 .chat_header_icon-face {
-  background-image: url('../../images/face.svg');
+  background-image: url('../../../assets/images/face.svg');
 }
 .chat_header_icon-mic {
-  background-image: url('../../images/mic.svg');
+  background-image: url('../../../assets/images/mic.svg');
 }

@@ -2,7 +2,7 @@ import './SidebarSearch.css';
 import React from 'react';
 import useForm from '../../../hooks/useForm';
 
-const SidebarSearch = ({ usersList, onUserSelect }) => {
+const SidebarSearch = ({ usersList, onChoice }) => {
   const { values, handleChange } = useForm();
 
   function handleSearch(e) {
@@ -12,7 +12,7 @@ const SidebarSearch = ({ usersList, onUserSelect }) => {
     const selectedUser = usersList.find((user) => user.id === chat_id);
 
     if (selectedUser) {
-      onUserSelect(selectedUser.id);
+      onChoice(selectedUser.id);
     }
   }
 

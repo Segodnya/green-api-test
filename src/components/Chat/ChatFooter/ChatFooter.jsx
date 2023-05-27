@@ -1,4 +1,5 @@
 import React from 'react';
+import './ChatFooter.css';
 
 function ChatFooter({ roomName, onSubmit, values, onChange }) {
   return (

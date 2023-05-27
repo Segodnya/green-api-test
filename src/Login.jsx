@@ -12,7 +12,6 @@ function Login() {
         idInstance,
         apiTokenInstance,
       });
-      console.log(response.data);
       // Save the auth token to localStorage
       localStorage.setItem('greenApiAuthToken', response.data.token);
     } catch (error) {

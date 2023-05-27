@@ -20,20 +20,20 @@ async function apiRequest(url, method, body) {
 }
 
 function getBaseUrl() {
-  const idInstance = localStorage.getItem('IdInstance');
-  const apiTokenInstance = localStorage.getItem('ApiTokenInstance');
-  return `${REACT_APP_GREEN_API_BASE_URL}/waInstance${idInstance}/${apiTokenInstance}`;
+  return `${REACT_APP_GREEN_API_BASE_URL}/waInstance`;
 }
 
-export async function authorize() {
-  const url = `${getBaseUrl()}/getSettings`;
+export async function authorize(id, token) {
+  const url = `${REACT_APP_GREEN_API_BASE_URL}/waInstance${id}/getSettings/${token}`;
   const method = 'GET';
   return apiRequest(url, method);
 }
 
 // Получение  данных о пользователе
 export async function getUserInfo(user) {
-  const url = `${getBaseUrl()}/getContactInfo`;
+  const id = localStorage.getItem('IdInstance');
+  const token = localStorage.getItem('ApiTokenInstance');
+  const url = `${getBaseUrl()}${id}/getContactInfo/${token}`;
   const method = 'POST';
   const body = {
     chatId: user,
@@ -43,14 +43,18 @@ export async function getUserInfo(user) {
 
 // Получение  данных о контактах
 export async function getAllUsers() {
-  const url = `${getBaseUrl()}/getContacts`;
+  const id = localStorage.getItem('IdInstance');
+  const token = localStorage.getItem('ApiTokenInstance');
+  const url = `${getBaseUrl()}${id}/getContacts/${token}`;
   const method = 'GET';
   return apiRequest(url, method);
 }
 
-// Получение последних сообщений диалога
+// Получение последних сообщений авторизованного пользователя
 export async function getChatHistory(roomUser) {
-  const url = `${getBaseUrl()}/getChatHistory`;
+  const id = localStorage.getItem('IdInstance');
+  const token = localStorage.getItem('ApiTokenInstance');
+  const url = `${getBaseUrl()}${id}/getChatHistory/${token}`;
   const method = 'POST';
   const body = {
     chatId: roomUser,
@@ -61,7 +65,9 @@ export async function getChatHistory(roomUser) {
 
 // Отправка сообщения контакту
 export async function sendNewMessage(chat_id, message) {
-  const url = `${getBaseUrl()}/sendMessage`;
+  const id = localStorage.getItem('IdInstance');
+  const token = localStorage.getItem('ApiTokenInstance');
+  const url = `${getBaseUrl()}${id}/sendMessage/${token}`;
   const method = 'POST';
   const body = {
     chatId: chat_id,

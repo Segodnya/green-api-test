@@ -7,6 +7,7 @@ const SidebarChat = ({ id, name, onChoice }) => {
 
   useEffect(() => {
     setAvatarSeed(Math.floor(Math.random() * 5000));
+    setAvatarSeed(1);
   }, []);
 
   const handleChoiceUser = () => {

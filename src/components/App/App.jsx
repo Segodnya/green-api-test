@@ -42,7 +42,7 @@ function App() {
           setUsersList(allUsersData);
         })
         .catch((err) => {
-          console.log(`ошибка получения данных по API при первичном запросе данных и контактах и юзере: ${err}`);
+          console.log(`Ошибка получения данных по API при первичном запросе данных и контактах и юзере: ${err}`);
         });
     }
   }, [loggedIn, currentUser.wid]);
@@ -73,7 +73,7 @@ function App() {
       .then((messagesData) => {
         setRoomMessages(messagesData);
       })
-      .catch((err) => console.log(`Ошибка API при получении messages with RoomUser: ${err}`));
+      .catch((err) => console.log(`Ошибка API при получении данных о RoomUser: ${err}`));
   }
 
   async function sendMessage(id, message) {

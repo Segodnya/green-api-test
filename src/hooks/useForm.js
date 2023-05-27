@@ -30,10 +30,18 @@ function useForm(initialValues = {}, validate) {
     });
   }, [initialValues]);
 
+  const setValues = useCallback((newValues) => {
+    setFormState((prevState) => ({
+      ...prevState,
+      values: { ...prevState.values, ...newValues },
+    }));
+  }, []);
+
   return {
     ...formState,
     handleChange,
     resetForm,
+    setValues,
   };
 }
 
